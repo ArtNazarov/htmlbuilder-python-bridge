@@ -3,6 +3,7 @@
 htmlbuilder-python-bridge is serverside and client tools for uploading static sites. 
 It is addon for https://github.com/ArtNazarov/htmlbuilder
 
+[Flask app with WSGI](http://apprr.rf.gd/flask.png)
 
 # О расширении
 
@@ -68,5 +69,11 @@ pip install requirments.txt
 
 Launch server / Запуск сервера
 ```
-python3 server.py
+mod_wsgi-express start-server wsgi.py --processes 4 --port 8080
+```
+
+or
+
+```
+mod_wsgi-express start-server wsgi.py --processes 4 --port 8080 --user www-data --group www-data
 ```
